@@ -1,0 +1,40 @@
+body{
+    /* background-color: grey; */
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 125, 167);
+    border-bottom: 2px solid black;
+}
+
+.dropdown{
+    color: white;
+    /* display: flex;
+    flex-flow: column;
+    justify-content: center; */
+    width: 200px;
+    /* border: 1px solid goldenrod */
+}
+
+.dropBtn{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.dropdown ul li{
+    border: 1px solid black;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.hide{
+    display:none;
+}
