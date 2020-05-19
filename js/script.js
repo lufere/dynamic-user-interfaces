@@ -12,3 +12,5 @@ dropBtn.addEventListener('mouseleave', function(){
 menu.addEventListener('mouseleave', function(){
     menu.classList.toggle("hide");
 })
+
+// alert(window.innerWidth);
