@@ -47,7 +47,7 @@ header{
     padding: 0 10px;
 }
 
-.dropdown ul li{
+.dropdown ul li, .dropdown ul a{
     border: 1px solid black;
     height: 40px;
     display: flex;
