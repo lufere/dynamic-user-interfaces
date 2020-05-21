@@ -92,38 +92,59 @@ function showFerret(){
 circles[0].addEventListener('click', function(){
     ferretIndex = 0;
     showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
 })
 
 circles[1].addEventListener('click', function(){
     ferretIndex = 1;
     showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
 })
 
 circles[2].addEventListener('click', function(){
     ferretIndex = 2;
     showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
 })
 
 circles[3].addEventListener('click', function(){
     ferretIndex = 3;
     showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
 })
 
 circles[4].addEventListener('click', function(){
     ferretIndex = 4;
     showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
 })
+
+function advance(){
+    ferretIndex += 1
+    showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
+}
+
+function rewind(){
+    ferretIndex -= 1
+    showFerret();
+    clearTimeout(time);
+    time = setTimeout(advance, 5000);
+}
 
 let leftArrow = document.querySelector("#arrowLeft");
 let rightArrow = document.querySelector("#arrowRight");
 
-leftArrow.addEventListener('click', function(){
-    ferretIndex -= 1;
-    showFerret();
-})
+leftArrow.addEventListener('click', rewind)
 
-rightArrow.addEventListener('click', function(){
-    ferretIndex += 1;
-    showFerret();
-})
+rightArrow.addEventListener('click', advance)
 showFerret();
+
+let time = setTimeout(advance, 5000);
+// setInterval(advance, 5000)
