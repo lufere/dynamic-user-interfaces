@@ -61,3 +61,29 @@ function setListeners(){
 
 renderNav();
 window.addEventListener('resize', renderNav);
+
+let ferrets = [...document.querySelectorAll(".ferretImg")];
+console.log(ferrets);
+
+let ferretIndex = 0;
+
+function showFerret(){
+    ferrets.forEach(element => element.classList.add("hide"));
+    if (ferretIndex == ferrets.length) ferretIndex = 0;
+    if (ferretIndex < 0) ferretIndex = ferrets.length-1;
+    ferrets[ferretIndex].classList.remove("hide");
+}
+
+let leftArrow = document.querySelector("#arrowLeft");
+let rightArrow = document.querySelector("#arrowRight");
+
+leftArrow.addEventListener('click', function(){
+    ferretIndex -= 1;
+    showFerret();
+})
+
+rightArrow.addEventListener('click', function(){
+    ferretIndex += 1;
+    showFerret();
+})
+showFerret();

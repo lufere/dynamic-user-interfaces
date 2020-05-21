@@ -73,18 +73,19 @@ header{
 
 #imgGallery{
     height: 800px;
-    width: 800px;
+    width: 1000px;
     background-color: gray;
     margin-top: 30px;
     display: flex;
-    justify-content: space-evenly;
+    padding: 0 40px;
+    justify-content: space-between;
     align-items: center;
 }
 
 .individualImg{
     height: calc(100% - 50px);
     width: 500px;
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
     display: flex;
     justify-content: center;
 }
