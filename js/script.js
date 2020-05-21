@@ -64,6 +64,8 @@ window.addEventListener('resize', renderNav);
 
 let ferrets = [...document.querySelectorAll(".ferretImg")];
 console.log(ferrets);
+let circles = [...document.querySelectorAll(".navButton")];
+console.log(circles);
 
 let ferretIndex = 0;
 
@@ -72,7 +74,45 @@ function showFerret(){
     if (ferretIndex == ferrets.length) ferretIndex = 0;
     if (ferretIndex < 0) ferretIndex = ferrets.length-1;
     ferrets[ferretIndex].classList.remove("hide");
+    circles.forEach(circle => circle.style.backgroundColor = "transparent");
+    circles[ferretIndex].style.backgroundColor = "goldenrod";
 }
+
+// circles.forEach(circle => circle.addEventListener('click', function(e){
+//     alert (circle);
+// }))
+
+// for (i=0 ; i<circles.length - 1; i++){
+//     circles[i].addEventListener('click', function(){
+//         ferretIndex = i;
+//         showFerret();
+//     })
+// }
+
+circles[0].addEventListener('click', function(){
+    ferretIndex = 0;
+    showFerret();
+})
+
+circles[1].addEventListener('click', function(){
+    ferretIndex = 1;
+    showFerret();
+})
+
+circles[2].addEventListener('click', function(){
+    ferretIndex = 2;
+    showFerret();
+})
+
+circles[3].addEventListener('click', function(){
+    ferretIndex = 3;
+    showFerret();
+})
+
+circles[4].addEventListener('click', function(){
+    ferretIndex = 4;
+    showFerret();
+})
 
 let leftArrow = document.querySelector("#arrowLeft");
 let rightArrow = document.querySelector("#arrowRight");
